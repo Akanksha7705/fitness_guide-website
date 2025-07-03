@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Diet Plan</title>
+    <style>
+        /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+<div class="diet-plan" onclick="showDetails('diabetes')">diabetes Diet</div>
+<div class="diet-plan" onclick="showDetails('paleo')">Paleo Diet</div>
+<div class="diet-plan" onclick="showDetails('mediterranean')">Mediterranean Diet</div>
+<div class="diet-plan" onclick="showDetails('vegan')">Vegan Diet</div>
+
+<div id="diet-details"></div>
+
+<script>
+  function showDetails(diet) {
+    var detailsContainer = document.getElementById('diet-details');
+    var details;
+
+    switch (diet) {
+      case 'diabetes':
+        details = " <header>
+        <h1>My Diet Plan</h1>
+        <!-- Add any additional header information here -->
+    </header>
+    
+    <nav>
+        <!-- Add navigation links if necessary -->
+    </nav>
+    
+    <main>
+        <section id="breakfast">
+            <h2>Breakfast</h2>
+            <ul>
+                <li>Meal 1: Description of breakfast meal 1</li>
+                <li>Meal 2: Description of breakfast meal 2</li>
+                <!-- Add more breakfast meal options as needed -->
+            </ul>
+        </section>
+        
+        <section id="lunch">
+            <h2>Lunch</h2>
+            <ul>
+                <li>Meal 1: Description of lunch meal 1</li>
+                <li>Meal 2: Description of lunch meal 2</li>
+                <!-- Add more lunch meal options as needed -->
+            </ul>
+        </section>
+        
+        <section id="dinner">
+            <h2>Dinner</h2>
+            <ul>
+                <li>Meal 1: Description of dinner meal 1</li>
+                <li>Meal 2: Description of dinner meal 2</li>
+                <!-- Add more dinner meal options as needed -->
+            </ul>
+        </section>
+        
+        <!-- Add sections for snacks, drinks, etc. -->
+    </main>";
+        break;
+      case 'paleo':
+        details = "The paleo diet emphasizes consuming whole foods that resemble what they look like in nature, avoiding processed foods.";
+        break;
+      case 'mediterranean':
+        details = "The Mediterranean diet focuses on eating primarily plant-based foods, such as fruits and vegetables, whole grains, legumes, and nuts.";
+        break;
+      case 'vegan':
+        details = "A vegan diet excludes all animal products, including meat, dairy, and eggs, and focuses on plant-based foods.";
+        break;
+      default:
+        details = "No details available for this diet plan.";
+    }
+
+    detailsContainer.innerHTML = "<p>" + details + "</p>";
+  }
+</script>
+    <header>
+        <h1>My Diet Plan</h1>
+        <!-- Add any additional header information here -->
+    </header>
+    
+    <nav>
+        <!-- Add navigation links if necessary -->
+    </nav>
+    
+    <main>
+        <section id="breakfast">
+            <h2>Breakfast</h2>
+            <ul>
+                <li>Meal 1: Description of breakfast meal 1</li>
+                <li>Meal 2: Description of breakfast meal 2</li>
+                <!-- Add more breakfast meal options as needed -->
+            </ul>
+        </section>
+        
+        <section id="lunch">
+            <h2>Lunch</h2>
+            <ul>
+                <li>Meal 1: Description of lunch meal 1</li>
+                <li>Meal 2: Description of lunch meal 2</li>
+                <!-- Add more lunch meal options as needed -->
+            </ul>
+        </section>
+        
+        <section id="dinner">
+            <h2>Dinner</h2>
+            <ul>
+                <li>Meal 1: Description of dinner meal 1</li>
+                <li>Meal 2: Description of dinner meal 2</li>
+                <!-- Add more dinner meal options as needed -->
+            </ul>
+        </section>
+        
+        <!-- Add sections for snacks, drinks, etc. -->
+    </main>
+    
+    <footer>
+        <p>Disclaimer: Consult a healthcare professional before starting any diet plan.</p>
+    </footer>
+</body>
+</html>

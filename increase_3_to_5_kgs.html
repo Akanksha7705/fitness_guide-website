@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Gain Plan</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 90%;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .progress {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 100px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Weight Gain Plan</h1>
+    <p>Goal: Gain 3-5 kgs in 2 weeks</p>
+    <p>Average Calorie Intake: 3500 calories/day</p>
+    <p>Approximate Weight Gained per Week: 3-3.5 kg</p>
+    <div class="progress">0%</div>
+    <table>
+        <tr>
+            <th>Day</th>
+            <th>Vegetarian Diet Plan</th>
+            <th>Non-Vegetarian Diet Plan</th>
+            <th>Complete</th>
+        </tr>
+        <!-- Repeat this block for each day -->
+        <tr>
+            <td id="day">Day 1</td>
+            <td id="vegDietPlan"><br>case 1:
+            
+                    vegDietPlanElement.innerHTML =  "Breakfast: Vegetable Poha<br>Lunch: Dal Tadka, Roti<br> Mixed Vegetable Sabzi<br>Dinner: Veg Pulao with Raita";
+                    nonVegDietPlanElement.innerHTML = "Breakfast: Scrambled Eggs with Toast<br>Lunch: Chicken Curry, Steamed Rice, Cucumber Salad<br>Dinner: Grilled Fish, Quinoa Salad";
+                    break;
+case 2:
+                    vegDietPlanElement.innerHTML = "Breakfast: Oatmeal with Almond Milk and Fruit<br>Lunch: Rajma (Kidney Beans) Curry, Brown Rice,<br> Green Salad<br>Dinner: Aloo Gobi, Chapati";
+                    nonVegDietPlanElement.innerHTML = "Breakfast: Egg and Spinach Omelette<br>Lunch: Tandoori Chicken, Vegetable Pulao, Yogurt<br>Dinner: Salmon Fillet, Steamed Vegetables";
+                    break;
+case 3:
+                    vegDietPlanElement.innerHTML = "Breakfast: Idli with Sambar and Coconut Chutney<br>Lunch: Chana Masala, Jeera Rice, Cucumber Raita<br>Dinner: Vegetable Stir-Fry with Tofu";
+                    nonVegDietPlanElement.innerHTML = "Breakfast: Ham and Cheese Sandwich<br>Lunch: Fish Curry, Brown Rice, Cucumber Raita<br>Dinner: Chicken Tikka Masala, Naan Bread";
+                    break;
+case 4:
+                    vegDietPlanElement.innerHTML = "Breakfast: Masala Dosa with Coconut Chutney<br>Lunch: Mushroom Curry, Jeera Rice, Cucumber Raita<br>Dinner: Lentil Soup with Garlic Bread";
+    nonVegDietPlanElement.innerHTML = "Breakfast: Bacon and Spinach Quiche<br>Lunch: Beef Stew with Roti<br>Dinner: Grilled Tilapia, Quinoa Salad";
+break;
+case 5:
+                      vegDietPlanElement.innerHTML = "Breakfast: Vegetable Uttapam with Tomato Chutney<br>Lunch: Aloo Matar, Chapati, Mixed Vegetable Salad<br>Dinner: Veggie Pizza";
+    nonVegDietPlanElement.innerHTML = "Breakfast: Smoked Salmon Bagel<br>Lunch: Pork Stir-Fry with Brown Rice<br>Dinner: Lamb Kebabs, Couscous Salad";
+                    break;
+case 6:
+                    vegDietPlanElement.innerHTML = "Breakfast: Avocado Toast with Poached Egg<br>Lunch: Paneer Tikka Masala, Jeera Rice, Cucumber Raita<br>Dinner: Vegetable Lasagna";
+    nonVegDietPlanElement.innerHTML = "Breakfast: Sausage and Mushroom Breakfast Burrito<br>Lunch: Shrimp Scampi Pasta<br>Dinner: Chicken Alfredo with Garlic Bread";
+                    break;
+case 7:
+                      vegDietPlanElement.innerHTML = "Breakfast: Vegetable Poha<br>Lunch: Dal Tadka, Roti, Mixed Vegetable Sabzi<br>Dinner: Veg Pulao with Raita";
+    nonVegDietPlanElement.innerHTML = "Breakfast: Scrambled Eggs with Toast<br>Lunch: Chicken Curry, Steamed Rice, Cucumber Salad<br>Dinner: Grilled Fish, Quinoa Salad";
+                    break;
+<br>Dinner: Vegetable Biryani, Raita</td>
+<td id="nonVegDietPlan">Breakfast: Scrambled Eggs, Toast<br>Lunch: Grilled Chicken, Rice, Salad<br>Dinner: Fish Curry, Roti</td>
+            <td><button onclick="completeDay()">Complete</button></td>
+        </tr>
+        <!-- Repeat the above row for each day -->
+    </table>
+
+
+    <script>
+        let currentDay = 1;
+        const totalDays = 14;
+        const progressElement = document.querySelector('.progress');
+
+        function completeDay() {
+            currentDay++;
+            if (currentDay > totalDays) {
+                currentDay = totalDays;
+            }
+            updateDietPlan();
+            updateProgress();
+        }
+
+        function updateDietPlan() {
+            const dayElement = document.getElementById('day');
+            const vegDietPlanElement = document.getElementById('vegDietPlan');
+            const nonVegDietPlanElement = document.getElementById('nonVegDietPlan');
+            dayElement.textContent = `Day ${currentDay}`;
+            // Update diet plan based on day
+            // You can fetch diet plan data from a database or define it statically 
+            switch (currentDay) {
+               case 1:
+                    vegDietPlanElement.innerHTML =  "Breakfast: Vegetable Poha<br>Lunch: Dal Tadka, Roti,<br> Mixed Vegetable Sabzi<br>Dinner: Veg Pulao with Raita";
+                    nonVegDietPlanElement.innerHTML = "Breakfast: Scrambled Eggs <br>with Toast<br>Lunch: Chicken Curry, Steamed Rice,<br> Cucumber Salad<br>Dinner: Grilled Fish, Quinoa Salad";
+                    break;
+case 2:
+                    vegDietPlanElement.innerHTML = "Breakfast: Oatmeal with Almond Milk and Fruit<br>Lunch: Rajma (Kidney Beans) Curry, Brown Rice, <br>Green Salad<br>Dinner: Aloo Gobi, Chapati";
+                    nonVegDietPlanElement.innerHTML = "Breakfast: Egg and Spinach Omelette<br>Lunch: Tandoori Chicken, Vegetable Pulao, Yogurt<br>Dinner: Salmon Fillet, Steamed Vegetables";
+                    break;
+case 3:
+                    vegDietPlanElement.innerHTML = "Breakfast: Idli with Sambar and Coconut Chutney<br>Lunch: Chana Masala, Jeera Rice, Cucumber Raita<br>Dinner: Vegetable Stir-Fry with Tofu";
+                    nonVegDietPlanElement.innerHTML = "Breakfast: Ham and Cheese Sandwich<br>Lunch: Fish Curry, Brown Rice, Cucumber Raita<br>Dinner: Chicken Tikka Masala, Naan Bread";
+                    break;
+case 4:
+                    vegDietPlanElement.innerHTML = "Breakfast: Masala Dosa with Coconut Chutney<br>Lunch: Mushroom Curry, Jeera Rice, Cucumber Raita<br>Dinner: Lentil Soup with Garlic Bread";
+    nonVegDietPlanElement.innerHTML = "Breakfast: Bacon and Spinach Quiche<br>Lunch: Beef Stew with Roti<br>Dinner: Grilled Tilapia, Quinoa Salad";
+break;
+case 5:
+                      vegDietPlanElement.innerHTML = "Breakfast: Vegetable Uttapam with Tomato Chutney<br>Lunch: Aloo Matar, Chapati, Mixed Vegetable Salad<br>Dinner: Veggie Pizza";
+    nonVegDietPlanElement.innerHTML = "Breakfast: Smoked Salmon Bagel<br>Lunch: Pork Stir-Fry with Brown Rice<br>Dinner: Lamb Kebabs, Couscous Salad";
+                    break;
+case 6:
+                    vegDietPlanElement.innerHTML = "Breakfast: Avocado Toast with Poached Egg<br>Lunch: Paneer Tikka Masala, Jeera Rice, Cucumber Raita<br>Dinner: Vegetable Lasagna";
+    nonVegDietPlanElement.innerHTML = "Breakfast: Sausage and Mushroom Breakfast Burrito<br>Lunch: Shrimp Scampi Pasta<br>Dinner: Chicken Alfredo with Garlic Bread";
+                    break;
+case 7:
+                      vegDietPlanElement.innerHTML = "Breakfast: Vegetable Poha<br>Lunch: Dal Tadka, Roti, Mixed Vegetable Sabzi<br>Dinner: Veg Pulao with Raita";
+    nonVegDietPlanElement.innerHTML = "Breakfast: Scrambled Eggs with Toast<br>Lunch: Chicken Curry, Steamed Rice, Cucumber Salad<br>Dinner: Grilled Fish, Quinoa Salad";
+                    break;
+
+case 8:
+                    vegDietPlanElement.innerHTML =  "Breakfast: Vegetable Poha<br>Lunch: Dal Tadka, Roti, Mixed Vegetable Sabzi<br>Dinner: Veg Pulao with Raita";
+                    nonVegDietPlanElement.innerHTML = "Breakfast: Scrambled Eggs with Toast<br>Lunch: Chicken Curry, Steamed Rice, Cucumber Salad<br>Dinner: Grilled Fish, Quinoa Salad";
+                    break;
+case 9:
+                    vegDietPlanElement.innerHTML = "Breakfast: Oatmeal with Almond Milk and Fruit<br>Lunch: Rajma (Kidney Beans) Curry, Brown Rice, Green Salad<br>Dinner: Aloo Gobi, Chapati";
+                    nonVegDietPlanElement.innerHTML = "Breakfast: Egg and Spinach Omelette<br>Lunch: Tandoori Chicken, Vegetable Pulao, Yogurt<br>Dinner: Salmon Fillet, Steamed Vegetables";
+                    break;
+case 10:
+                    vegDietPlanElement.innerHTML = "Breakfast: Idli with Sambar and Coconut Chutney<br>Lunch: Chana Masala, Jeera Rice, Cucumber Raita<br>Dinner: Vegetable Stir-Fry with Tofu";
+                    nonVegDietPlanElement.innerHTML = "Breakfast: Ham and Cheese Sandwich<br>Lunch: Fish Curry, Brown Rice, Cucumber Raita<br>Dinner: Chicken Tikka Masala, Naan Bread";
+                    break;
+case 11:
+                    vegDietPlanElement.innerHTML = "Breakfast: Masala Dosa with Coconut Chutney<br>Lunch: Mushroom Curry, Jeera Rice, Cucumber Raita<br>Dinner: Lentil Soup with Garlic Bread";
+    nonVegDietPlanElement.innerHTML = "Breakfast: Bacon and Spinach Quiche<br>Lunch: Beef Stew with Roti<br>Dinner: Grilled Tilapia, Quinoa Salad";
+break;
+case 12:
+                      vegDietPlanElement.innerHTML = "Breakfast: Vegetable Uttapam with Tomato Chutney<br>Lunch: Aloo Matar, Chapati, Mixed Vegetable Salad<br>Dinner: Veggie Pizza";
+    nonVegDietPlanElement.innerHTML = "Breakfast: Smoked Salmon Bagel<br>Lunch: Pork Stir-Fry with Brown Rice<br>Dinner: Lamb Kebabs, Couscous Salad";
+                    break;
+case 13:
+                    vegDietPlanElement.innerHTML = "Breakfast: Avocado Toast with Poached Egg<br>Lunch: Paneer Tikka Masala, Jeera Rice, Cucumber Raita<br>Dinner: Vegetable Lasagna";
+    nonVegDietPlanElement.innerHTML = "Breakfast: Sausage and Mushroom Breakfast Burrito<br>Lunch: Shrimp Scampi Pasta<br>Dinner: Chicken Alfredo with Garlic Bread";
+                    break;
+case 14:
+                      vegDietPlanElement.innerHTML = "Breakfast: Vegetable Poha<br>Lunch: Dal Tadka, Roti, Mixed Vegetable Sabzi<br>Dinner: Veg Pulao with Raita";
+    nonVegDietPlanElement.innerHTML = "Breakfast: Scrambled Eggs with Toast<br>Lunch: Chicken Curry, Steamed Rice, Cucumber Salad<br>Dinner: Grilled Fish, Quinoa Salad";
+                    break;
+
+                // Add cases for other days here
+                default:
+                    vegDietPlanElement.textContent = "Rest day";
+                    nonVegDietPlanElement.textContent = "Rest day";
+                    break;
+            }
+        }
+
+        function updateProgress() {
+            const progress = Math.floor((currentDay / totalDays) * 100);
+            progressElement.textContent = `${progress}%`;
+        }
+
+        // Initial update of progress and diet plan
+        updateProgress();
+        updateDietPlan();
+    </script>
+</body>
+</html>

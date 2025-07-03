@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display BMI</title>
+</head>
+<body>
+    <h1> YOU ARE UNDER WEIGHT</h1>
+    <div id="bmiDisplay"></div>
+
+    <script>
+        var storedBMI = localStorage.getItem("bmi");
+        document.getElementById("bmiDisplay").innerText = "OF BMI : " + storedBMI;
+    </script>
+<style>
+    .container {
+      width: 300px;
+      margin: 0 auto;
+    }
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Select a disease:</h1>
+  
+
+<select id="destinationSelect" onchange="redirectToSelected()">
+  <option value="">Select an option...</option>
+ <option value="page0.html">None</option>
+
+  <option value="page1.html">Diabetes</option>
+  <option value="page2.html">Thyroid</option>
+  <option value="page3.html">Hypertension</option>
+<option value="page4.html">Hypotension</option>
+
+
+
+</select>
+
+<script>
+  function redirectToSelected() {
+    var selectElement = document.getElementById('destinationSelect');
+    var selectedValue = selectElement.value;
+    
+    if (selectedValue) {
+      window.location.href = selectedValue;
+    }
+  }
+</script>
+  </div>
+ <footer>
+        <p>Disclaimer: Consult a healthcare professional before starting any diet plan.</p>
+    </footer>
+
+</body>
+</html>

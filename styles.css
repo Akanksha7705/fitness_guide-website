@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: BLACK;
+  color: WHITE;
+  padding: 1px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heading {
+  margin: 0;
+}
+
+.top-menu ul {
+  list-style: none;
+  margin: 2.5px;
+  padding: 2px;
+}
+
+.top-menu ul li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.top-menu ul li:first-child {
+  margin-left: 0;
+}
+
+.top-menu ul li a {
+  color: WHITE;
+  text-decoration: NONE;
+  padding: 0px 10px;
+  border-radius: 5px;
+}
+
+.top-menu ul li a:hover {
+  background-color: RED;
+}
+
+.content {
+  padding: 20px;
+}
+.container {
+  width: 50%; /* Adjust as needed */
+  margin: 50 ; /* Center the container horizontally */
+margin-top: 10px;
+margin-left:80px;
+
+}
+
+.my-paragraph {
+  font-size:50px; /* Adjust as needed */
+  line-height: 0.3; /* Adjust as needed */
+  color: black; /* Text color */
+  margin-top: 30px; /* Adjust as needed */
+
+
+}
+containers {
+  width: 50%; /* Adjust as needed */
+  margin: 0 ; /* Center the container horizontally */
+
+}
+
+.my-paragraphs {
+  font-size: 50px; /* Adjust as needed */
+  line-height: 0.3; /* Adjust as needed */
+  color: skyblue; /* Text color */
+  margin-top:100px; /* Adjust as needed */
+margin-left: 200px;
+
+}

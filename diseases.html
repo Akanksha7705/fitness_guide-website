@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Diseases Selection</title>
+  <style>
+    .container {
+      width: 300px;
+      margin: 0 auto;
+    }
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Select a disease:</h2>
+    <form>
+      <form action="diabetes.html" method="get">
+      <label for="diseases">Select a disease:</label>
+      <select id="diseases" name="diseases" class="input-field" required>
+        <option value="">Select a disease</option>
+        <option value="diabetes">Diabetes</option>
+        <option value="heart-disease">Heart Disease</option>
+        <option value="hypertension">Hypertension</option>
+        <option value="obesity">Obesity</option>
+       
+      </select>
+      <button onclick="submit">Submit</button>
+     
+      <button onclick="window.location.href = "diabetes.html"">Submit</button>
+     <script>
+        document.getElementById("Submit").addEventListener("click", function() {
+            window.location.href = "diabetes.html";
+        });
+    </script>
+    </form>
+  </div>
+    
+    <footer>
+        <p>Disclaimer: Consult a healthcare professional before starting any diet plan.</p>
+    </footer>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirect After Select</title>
+</head>
+<body>
+
+<h1>Select a Destination:</h1>
+
+<select id="destinationSelect" onchange="redirectToSelected()">
+  <option value="">Select an option...</option>
+  <option value="page1.html">Page 1</option>
+  <option value="page2.html">Page 2</option>
+  <option value="page3.html">Page 3</option>
+</select>
+
+<script>
+  function redirectToSelected() {
+    var selectElement = document.getElementById('destinationSelect');
+    var selectedValue = selectElement.value;
+    
+    if (selectedValue) {
+      window.location.href = selectedValue;
+    }
+  }
+</script>
+
+</body>
+</html>
+
+
