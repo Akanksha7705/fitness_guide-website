@@ -13,6 +13,12 @@ A clean, informative, and responsive frontend web application offering comprehen
 - **Script Enhancements**: `script.js` adds interactive elements, input validation, and UI behaviors.
 
 ---
+## Tech Stack
+- HTML5 for semantic structure
 
-##  Project Structure
+- CSS3 for layout & responsive styling
+
+- JavaScript for client-side interactivity
+
+- PHP (basic) for login form handling
 
